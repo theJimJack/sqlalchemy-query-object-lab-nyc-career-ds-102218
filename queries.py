@@ -7,7 +7,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 def return_apple():
-    pass
+    return session.query(Company).filter(Company.symbol=="AAPL")
 
 def return_disneys_industry():
     pass
